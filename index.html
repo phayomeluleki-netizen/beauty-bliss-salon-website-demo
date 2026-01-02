@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Butty Bliss Salon | Modern Beauty in Eswatini</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+  <style>
+    body {
+      background-color: #ffffff;
+      color: #333;
+      font-family: 'Helvetica Neue', sans-serif;
+    }
+    nav {
+      background-color: #f8e8ee;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    h2, h3, h4 {
+      color: #c2185b;
+    }
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    .hero img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 1rem;
+      max-height: 450px;
+      object-fit: cover;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    figure img {
+      border-radius: 8px;
+      width: 100%;
+      height: auto;
+    }
+    footer {
+      background-color: #f8e8ee;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+    .booking {
+      background-color: #fff0f5;
+      border-radius: 10px;
+      padding: 2rem;
+      text-align: center;
+    }
+    .booking form input, .booking form select {
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="container-fluid">
+    <ul>
+      <li><strong>Butty Bliss Salon</strong></li>
+    </ul>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#booking" role="button">Book</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <div class="grid">
+      <section class="hero">
+        <hgroup>
+          <h2>Welcome to Butty Bliss Salon</h2>
+          <h3>Modern Beauty & Confidence in the Heart of Eswatini</h3>
+        </hgroup>
+        <p>At Butty Bliss Salon, we blend creativity, skill, and care to bring out your natural beauty. Our stylists and skincare experts ensure every visit leaves you glowing — inside and out.</p>
+        <img src="https://images.unsplash.com/photo-1596204976717-1a9ff7b1e4ae?auto=format&fit=crop&w=1200&q=80" alt="Salon interior">
+      </section>
+
+      <section id="about">
+        <h3>About Us</h3>
+        <p>Founded in Eswatini, Butty Bliss Salon is your destination for expert styling, nail artistry, and skincare treatments. Our mission is to make you look stunning and feel blissful every time you walk through our doors.</p>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1604908177251-de4c7e0f94b6?auto=format&fit=crop&w=1200&q=80" alt="Salon team at work">
+          <figcaption><a href="https://unsplash.com" target="_blank">Photo by Unsplash</a></figcaption>
+        </figure>
+      </section>
+
+      <section id="services">
+        <h3>Our Services</h3>
+        <div class="grid">
+          <div>
+            <h4>💇 Hair Styling</h4>
+            <p>From precision cuts to color transformations, our stylists craft looks that reflect your personality and style.</p>
+          </div>
+          <div>
+            <h4>💅 Nail Care</h4>
+            <p>Experience elegant manicures and pedicures designed to pamper and perfect your hands and feet.</p>
+          </div>
+          <div>
+            <h4>💆 Skincare</h4>
+            <p>Relax with rejuvenating facials that restore glow and vitality using natural, high-quality products.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery">
+        <h3>Gallery</h3>
+        <p>See the Butty Bliss experience in action!</p>
+        <div class="grid">
+          <figure>
+            <img src="https://images.unsplash.com/photo-1603190287605-e8f4c7bdf9a0?auto=format&fit=crop&w=800&q=80" alt="Hair transformation">
+          </figure>
+          <figure>
+            <img src="https://images.unsplash.com/photo-1603112578311-9b36c6a206cc?auto=format&fit=crop&w=800&q=80" alt="Nail design">
+          </figure>
+          <figure>
+            <img src="https://images.unsplash.com/photo-1582095133179-2988d1a4f86d?auto=format&fit=crop&w=800&q=80" alt="Facial session">
+          </figure>
+        </div>
+      </section>
+
+      <section id="booking" class="booking">
+        <h3>Book an Appointment</h3>
+        <p>Reserve your spot today and let us bring out your inner bliss. You can also <a href="https://wa.me/26876000000" target="_blank">message us on WhatsApp</a> for instant booking.</p>
+
+        <form class="grid">
+          <input type="text" id="name" name="name" placeholder="Your full name" required>
+          <input type="email" id="email" name="email" placeholder="Your email address" required>
+          <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+          <select id="service" name="service" required>
+            <option value="">Select a service</option>
+            <option value="hair">Hair Styling</option>
+            <option value="nails">Nail Care</option>
+            <option value="skincare">Skincare & Makeup</option>
+          </select>
+          <input type="date" id="date" name="date" required>
+          <button type="submit" onclick="event.preventDefault(); alert('Thank you! Your booking request has been received. We’ll contact you soon.');">Submit Booking</button>
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <section aria-label="Subscribe example">
+    <div class="container">
+      <article>
+        <hgroup>
+          <h2>Stay Connected</h2>
+          <h3>Join our mailing list for exclusive offers</h3>
+        </hgroup>
+        <form class="grid">
+          <input type="text" id="firstname" name="firstname" placeholder="Your first name" aria-label="First name" required>
+          <input type="email" id="email" name="email" placeholder="Your email address" aria-label="Email" required>
+          <button type="submit" onclick="event.preventDefault()">Subscribe</button>
+        </form>
+      </article>
+    </div>
+  </section>
+
+  <footer class="container" id="contact">
+    <small>
+      <a href="mailto:info@buttybliss.com">info@buttybliss.com</a> • 
+      <a href="https://www.instagram.com" target="_blank">Instagram</a> •
+      <a href="https://www.facebook.com" target="_blank">Facebook</a>
+    </small>
+    <p>© 2026 Butty Bliss Salon — Designed with 💖 in Eswatini</p>
+  </footer>
+
+</body>
+</html>
