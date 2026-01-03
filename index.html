@@ -6,50 +6,72 @@
   <title>Butty Bliss Salon | Modern Beauty in Eswatini</title>
   <link rel="stylesheet" href="pico.min.css" />
   <style>
+    :root {
+      --accent: #c2185b;
+      --light-bg: #fff0f6;
+      --card-bg: #ffe6ef;
+    }
     body {
-      background-color: #fff5f7;
+      background-color: var(--light-bg);
       color: #222;
-      font-family: 'Helvetica Neue', sans-serif;
+      font-family: "Poppins", "Helvetica Neue", sans-serif;
+      transition: background 0.5s ease;
     }
     nav {
-      background-color: #f8dce6;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      background: var(--accent);
+      color: #fff;
     }
-    h2, h3, h4 {
-      color: #b30059;
-    }
-    a {
-      color: #b30059;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+    nav a { color: #fff; font-weight: 500; }
+    h2, h3, h4 { color: var(--accent); }
     footer {
-      background-color: #f8dce6;
+      background-color: var(--accent);
+      color: #fff;
       text-align: center;
       padding: 1rem;
-      color: #333;
     }
     .hero {
       text-align: center;
       padding: 3rem 1rem;
+      background: linear-gradient(to right, #ffe0eb, #fff5f7);
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
     .hero img {
       border-radius: 10px;
       width: 100%;
       max-height: 450px;
       object-fit: cover;
+      animation: fadeIn 2s ease;
+    }
+    section {
+      margin-top: 2rem;
+      animation: fadeUp 1s ease;
+    }
+    figure img {
+      border-radius: 10px;
+      width: 100%;
+      height: auto;
     }
     .booking {
-      background-color: #ffe6ef;
+      background-color: var(--card-bg);
       border-radius: 10px;
       padding: 2rem;
     }
-    figure img {
-      border-radius: 8px;
-      width: 100%;
-      height: auto;
+    button, [role="button"] {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+    }
+    button:hover, [role="button"]:hover {
+      opacity: 0.9;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
   </style>
 </head>
@@ -69,93 +91,92 @@
   </nav>
 
   <main class="container">
-    <div class="grid">
-      <section class="hero">
-        <hgroup>
-          <h2>Welcome to Butty Bliss Salon</h2>
-          <h3>Modern Beauty & Confidence in the Heart of Eswatini</h3>
-        </hgroup>
-        <p>At Butty Bliss Salon, we blend creativity, skill, and care to bring out your natural beauty. Our stylists and skincare experts ensure every visit leaves you glowing — inside and out.</p>
-        <img src="https://images.pexels.com/photos/3993445/pexels-photo-3993445.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Salon interior" />
-      </section>
+    <section class="hero">
+      <hgroup>
+        <h2>Welcome to Butty Bliss Salon</h2>
+        <h3>Where Swazi elegance meets modern beauty</h3>
+      </hgroup>
+      <p>Step into our world of luxury and self-care. From the latest hair trends to flawless nails and glowing skin, we celebrate authentic African beauty with modern sophistication.</p>
+      <img src="https://images.pexels.com/photos/10081571/pexels-photo-10081571.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Salon interior in Africa" />
+    </section>
 
-      <section id="about">
-        <h3>About Us</h3>
-        <p>Founded in Eswatini, Butty Bliss Salon is your destination for expert styling, nail artistry, and skincare treatments. Our mission is to make you look stunning and feel blissful every time you walk through our doors.</p>
-        <figure>
-          <img src="https://images.pexels.com/photos/3993443/pexels-photo-3993443.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Salon team at work" />
-          <figcaption><a href="https://pexels.com" target="_blank">Photo by Pexels</a></figcaption>
-        </figure>
-      </section>
+    <section id="about">
+      <h3>About Us</h3>
+      <p>Located in the heart of Eswatini, Butty Bliss Salon offers expert hairdressing, nail art, and skincare. Our talented stylists bring creativity and care to every client. We believe beauty is confidence — and confidence is bliss.</p>
+      <figure>
+        <img src="https://images.pexels.com/photos/3993460/pexels-photo-3993460.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Swazi stylist at work" />
+      </figure>
+    </section>
 
-      <section id="services">
-        <h3>Our Services</h3>
-        <div class="grid">
-          <div>
-            <h4>💇 Hair Styling</h4>
-            <p>From precision cuts to color transformations, our stylists craft looks that reflect your personality and style.</p>
-          </div>
-          <div>
-            <h4>💅 Nail Care</h4>
-            <p>Experience elegant manicures and pedicures designed to pamper and perfect your hands and feet.</p>
-          </div>
-          <div>
-            <h4>💆 Skincare</h4>
-            <p>Relax with rejuvenating facials that restore glow and vitality using natural, high-quality products.</p>
-          </div>
-        </div>
-      </section>
+    <section id="services">
+      <h3>Our Services</h3>
+      <div class="grid">
+        <article>
+          <h4>💇 Hair Styling</h4>
+          <p>Trendy cuts, protective styles, silk press, and color — all designed to enhance your natural beauty.</p>
+        </article>
+        <article>
+          <h4>💅 Nail Care</h4>
+          <p>Classy manicures, acrylics, gel polish, and creative nail art that speaks your style.</p>
+        </article>
+        <article>
+          <h4>💆 Skincare & Makeup</h4>
+          <p>Rejuvenating facials and flawless makeup for every occasion.</p>
+        </article>
+      </div>
+    </section>
 
-      <section id="gallery">
-        <h3>Gallery</h3>
-        <p>See the Butty Bliss experience in action!</p>
-        <div class="grid">
-          <figure>
-            <img src="https://images.pexels.com/photos/4150799/pexels-photo-4150799.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Hair transformation" />
-          </figure>
-          <figure>
-            <img src="https://images.pexels.com/photos/3993463/pexels-photo-3993463.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Nail design" />
-          </figure>
-          <figure>
-            <img src="https://images.pexels.com/photos/3993475/pexels-photo-3993475.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Facial session" />
-          </figure>
-        </div>
-      </section>
+    <section id="gallery">
+      <h3>Gallery</h3>
+      <div class="grid">
+        <figure><img src="https://images.pexels.com/photos/3993462/pexels-photo-3993462.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Salon work"></figure>
+        <figure><img src="https://images.pexels.com/photos/3993463/pexels-photo-3993463.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Nail art"></figure>
+        <figure><img src="https://images.pexels.com/photos/3993464/pexels-photo-3993464.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Hair style"></figure>
+      </div>
+    </section>
 
-      <section id="booking" class="booking">
-        <h3>Book an Appointment</h3>
-        <p>Ready for your next beauty moment? Reach out instantly on WhatsApp to book your appointment.</p>
+    <section id="booking" class="booking">
+      <h3>Book an Appointment</h3>
+      <p>Fill in your details below. When you press **Book Now**, WhatsApp will open with your information ready to send to us 💖</p>
 
-        <a href="https://wa.me/26876262057?text=Hi%20Butty%20Bliss%20Salon!%20I%27d%20like%20to%20book%20an%20appointment.%20My%20name%20is..." 
-           target="_blank" role="button">💬 Book Now on WhatsApp</a>
-      </section>
-    </div>
+      <form class="grid" id="bookingForm">
+        <input type="text" id="name" placeholder="Your full name" required />
+        <input type="tel" id="phone" placeholder="Your phone number" required />
+        <select id="service" required>
+          <option value="">Select a service</option>
+          <option value="Hair Styling">Hair Styling</option>
+          <option value="Nail Care">Nail Care</option>
+          <option value="Skincare & Makeup">Skincare & Makeup</option>
+        </select>
+        <input type="date" id="date" required />
+        <textarea id="notes" rows="3" placeholder="Additional notes (optional)"></textarea>
+        <button type="submit">💬 Book Now on WhatsApp</button>
+      </form>
+    </section>
   </main>
 
-  <section aria-label="Subscribe example">
-    <div class="container">
-      <article>
-        <hgroup>
-          <h2>Stay Connected</h2>
-          <h3>Join our mailing list for exclusive offers</h3>
-        </hgroup>
-        <form class="grid">
-          <input type="text" id="firstname" name="firstname" placeholder="Your first name" aria-label="First name" required />
-          <input type="email" id="email" name="email" placeholder="Your email address" aria-label="Email" required />
-          <button type="submit" onclick="event.preventDefault()">Subscribe</button>
-        </form>
-      </article>
-    </div>
-  </section>
-
-  <footer class="container" id="contact">
+  <footer class="container">
     <small>
-      <a href="mailto:info@buttybliss.com">info@buttybliss.com</a> • 
-      <a href="https://www.instagram.com" target="_blank">Instagram</a> •
-      <a href="https://www.facebook.com" target="_blank">Facebook</a>
+      <a href="mailto:info@buttybliss.com" style="color:#fff;">info@buttybliss.com</a> • 
+      <a href="https://www.instagram.com" target="_blank" style="color:#fff;">Instagram</a> • 
+      <a href="https://www.facebook.com" target="_blank" style="color:#fff;">Facebook</a>
     </small>
     <p>© 2026 Butty Bliss Salon — Designed with 💖 in Eswatini</p>
   </footer>
+
+  <script>
+    // send booking info to WhatsApp
+    document.getElementById('bookingForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = encodeURIComponent(document.getElementById('name').value);
+      const phone = encodeURIComponent(document.getElementById('phone').value);
+      const service = encodeURIComponent(document.getElementById('service').value);
+      const date = encodeURIComponent(document.getElementById('date').value);
+      const notes = encodeURIComponent(document.getElementById('notes').value);
+      const message = `Hi Butty Bliss Salon! My name is ${name}. I would like to book ${service} on ${date}. My contact number is ${phone}. ${notes ? 'Notes: ' + notes : ''}`;
+      window.open(`https://wa.me/26876262057?text=${message}`, '_blank');
+    });
+  </script>
 
 </body>
 </html>
