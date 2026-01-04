@@ -74,7 +74,18 @@
       from { opacity: 0; }
       to { opacity: 1; }
     }
-  </style>
+  .hero img {
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+.hero {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  border-radius: 10px;
+    }</style>
 </head>
 
 <body>
