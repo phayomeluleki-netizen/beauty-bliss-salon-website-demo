@@ -171,8 +171,8 @@
   <h3>📍 Find Us</h3>
   <p>Visit Butty Bliss Salon in the heart of Eswatini. Tap below for directions:</p>
   <p>
-    <a href="https://www.google.com/maps/search/Butty+Bliss+Salon+Eswatini" target="_blank" role="button">
-      Get Directions on Google Maps
+    <a href="#" onclick="demoMap()" role="button">
+  Get Directions on Google Maps
     </a>
   </p>
   </section><footer class="container">
@@ -193,10 +193,22 @@
       const service = encodeURIComponent(document.getElementById('service').value);
       const date = encodeURIComponent(document.getElementById('date').value);
       const notes = encodeURIComponent(document.getElementById('notes').value);
-      const message = `Hi Butty Bliss Salon! My name is ${name}. I would like to book ${service} on ${date}. My contact number is ${phone}. ${notes ? 'Notes: ' + notes : ''}`;
-      window.open(`https://wa.me/26876262057?text=${message}`, '_blank');
-    });
-  </script>
+      alert(
+`✅ Demo Booking Submitted!
+
+Imagine this message being sent directly to your WhatsApp:
+
+Client Name: ${name}
+Service: ${service}
+Preferred Date: ${date}
+
+This is how your customers could book your services instantly.
+
+Ready to have this for your business?`
+  );
+
+});
+</script>
 
 </body>
 </html>
